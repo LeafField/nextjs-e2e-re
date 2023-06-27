@@ -13,6 +13,7 @@ export default async function TaskCrudLayout({
       <aside className={`h-[calc(100vh-64px)] w-1/4 bg-gray-200`}>
         <TaskEdit />
         <Suspense fallback={<Spinner />}>
+          {/* @ts-expect-error Async Server Component */}
           <TaskList />
         </Suspense>
       </aside>
